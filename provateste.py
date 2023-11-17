@@ -21,19 +21,26 @@ input_text = ""
 
 def solicite(a):
     intencoes = {
+        r'/^(Como)/':"como",
+        r'/(89890898)/':"mudar",
+        r'/(d08980)/':"metodo",
 
     }
     acoes = {
-        'forma de pagamento':"",
-        'atualizar pagamento':"",
-        'metodo de pagamento':"",
-        'mudar forma de pagamento':"",
+        'como':"Vá para aba meus cartões e entre em meu cartão de crédito",
+        'mudar':"Vá para aba meus pagamentos",
+        'metodo de pagamento':"Vá para aba mudar forma de pagamento",
     }
     input_text = a
     if input_text == "sair":
         return False
-    matches = re.findall(r'[+-]?\d+(?:\.\d+)?', input_text)
-    print(matches)
+    print()
+    if acoes[(intencoes[input_text]).lower()]:
+        print(acoes[intencoes[input_text]])
+    
+    else:
+        print("Não entendi")
+
     
     return True
 
