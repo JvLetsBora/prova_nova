@@ -34,12 +34,13 @@ def solicite(a):
     input_text = a
     if input_text == "sair":
         return False
-    print()
-    if acoes[(intencoes[input_text]).lower()]:
+   # print()
+
+    #if acoes[(intencoes[input_text]).lower()]:
         print(acoes[intencoes[input_text]])
     
-    else:
-        print("Não entendi")
+    #else:
+       # print("Não entendi")
 
     
     return True
